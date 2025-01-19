@@ -24,5 +24,6 @@ urlpatterns = [
     path('', sign_up_by_html),
     path('market/menu/', menu),
     path('market/market/', market),
-    path('market/cart/', cart)
+    path('market/cart/', cart),
+    path('platform/news', news)
 ]
