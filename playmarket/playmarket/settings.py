@@ -55,7 +55,8 @@ ROOT_URLCONF = 'playmarket.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates' / 'market',
+                 BASE_DIR / 'templates' / 'registration'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

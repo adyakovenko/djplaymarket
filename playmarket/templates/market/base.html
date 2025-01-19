@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ text_title }}</title>
+</head>
+<body>
+{% block pagename %}
+<h1>Главная страница</h1>
+{% endblock %}
+
+{%block menu %}
+<ul>
+    <li><a href="/market/menu">На главную</a></li>
+    <li><a href="/market/market">Меню</a></li>
+    <li><a href="/market/cart">Корзина</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{% for i in games %}
+    <p>
+        <button>{{ text_button_buy }}</button>
+        {{ i.0 }} | {{ i.1 }} | Стоимость: {{ i.2 }}
+    </p>
+{% endfor %}
+{% endblock %}
+
+
+
+</body>
+</html>
